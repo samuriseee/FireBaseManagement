@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="22dp"
+        android:paddingTop="16dp"
+        android:paddingRight="22dp"
+        android:paddingBottom="16dp"
+        android:weightSum="3">
+
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/img_order"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/avatar" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/tenkhoahoclist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tenthuonggoilist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tenkhoahoclist"
+                android:text="TextView"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/congdunglist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/tenthuonggoilist"
+                android:layout_alignBottom="@id/tenthuonggoilist"
+                android:layout_alignParentRight="true"
+                android:text="TextView"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                app:cardCornerRadius="40dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="40dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
